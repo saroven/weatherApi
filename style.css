@@ -19,6 +19,7 @@ section {
 }
 
 h1 {
+   min-height: 10vh;
    width: 50%;
    text-align: center;
    padding: 2rem;
@@ -26,6 +27,7 @@ h1 {
 }
 
 form {
+   min-height: 20vh;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -66,5 +68,12 @@ button {
       flex-direction: column;
       text-align: center;
       padding-bottom: 1rem;
+      width: 90%;
+   }
+   .data {
+      width: 90%;
+   }
+   h1 {
+      width: 90%;
    }
 }
