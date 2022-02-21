@@ -12,8 +12,8 @@ const displayData = (data) => {
       const parentDiv = document.createElement("div");
       const img = document.createElement("img");
       const temp = document.createElement("p");
-      heading.textContent = "Weather in " + data.name;
-      let temperature = data.main.temp - 273;
+      heading.textContent = "Weather in " + data.name + ", " + data.sys.country;
+      let temperature = data.main.temp;
       temp.textContent =
          "Current temperature: " + temperature.toFixed(2) + "°C";
       dataSection.innerHTML = "";
@@ -34,7 +34,7 @@ const getData = (e) => {
    const baseUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
    const apiKey = "f73757d7f42c8b196572823b173fc15f";
 
-   const url = baseUrl + locationData + "&appid=" + apiKey;
+   const url = baseUrl + locationData + "&units=metric&&appid=" + apiKey;
 
    fetch(url)
       .then((res) => res.json())
